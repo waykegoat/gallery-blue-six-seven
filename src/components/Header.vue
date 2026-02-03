@@ -26,7 +26,7 @@ header {
   align-items: center;
   padding: 2rem;
   width: 100%;
-  box-sizing: border-box; /* Ensures padding is included in the width */
+  box-sizing: border-box;
   color: black;
 }
 
@@ -35,7 +35,7 @@ header {
   top: 0;
   left: 0;
   right: 0;
-  z-index: 10; /* Ensure header is above other content */
+  z-index: 10; 
 }
 
 .logo {

@@ -17,7 +17,7 @@ const handleMouseMove = (event: MouseEvent) => {
   const { clientX, clientY } = event
   const { innerWidth, innerHeight } = window
 
-  const xOffset = (clientX / innerWidth - 0.5) * 30 // Multiplier for effect intensity
+  const xOffset = (clientX / innerWidth - 0.5) * 30 
   const yOffset = (clientY / innerHeight - 0.5) * 30
 
   backgroundPosition.value = `calc(50% + ${xOffset}px) calc(50% + ${yOffset}px)`
