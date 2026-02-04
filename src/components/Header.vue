@@ -1,9 +1,9 @@
 <template>
   <header :class="{ 'header-home': isHomePage }">
-    <div class="logo">
-      <RouterLink to="/"><Logo /></RouterLink>
-    </div>
     <nav>
+      <RouterLink to="/">
+        <img src="/images/logo.png" alt="Artium Logo" class="logo-image" />
+      </RouterLink>
       <RouterLink to="/catalog">Каталог</RouterLink>
       <span class="separator">|</span>
       <RouterLink to="/news">Новости</RouterLink>
@@ -38,11 +38,11 @@ header {
   z-index: 10; 
 }
 
-.logo {
-  position: absolute;
-  left: 2rem;
-  top: 50%;
-  transform: translateY(-50%);
+.logo-image {
+  height: 20px; 
+  width: auto;
+  display: block;
+  margin-right: -2rem; 
 }
 
 nav {
