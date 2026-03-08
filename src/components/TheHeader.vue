@@ -2,7 +2,7 @@
   <header :class="{ 'header-home': isHomePage }">
     <nav>
       <RouterLink to="/">
-        <img src="/images/logo.png" alt="Artium Logo" class="logo-image" />
+        <LogoIcon :size="20" />
       </RouterLink>
       <RouterLink to="/catalog">Каталог</RouterLink>
       <span class="separator">|</span>
@@ -14,6 +14,7 @@
 <script setup lang="ts">
 import { computed } from 'vue'
 import { useRoute } from 'vue-router'
+import LogoIcon from './LogoIcon.vue'
 
 const route = useRoute()
 const isHomePage = computed(() => route.path === '/')
@@ -35,14 +36,7 @@ header {
   top: 0;
   left: 0;
   right: 0;
-  z-index: 10; 
-}
-
-.logo-image {
-  height: 20px; 
-  width: auto;
-  display: block;
-  margin-right: -2rem; 
+  z-index: 10;
 }
 
 nav {
