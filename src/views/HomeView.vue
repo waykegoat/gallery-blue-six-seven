@@ -34,39 +34,9 @@
 
 <script setup lang="ts">
 import { useParallax } from '../composables/useParallax'
+import { paintings } from '../data/paintings'
 
 const { backgroundPosition } = useParallax(30)
-
-const paintings = [
-  {
-    id: 1,
-    title: 'Утренний свет',
-    author: 'Алексей Петров',
-    year: 1891,
-    image: '/images/6254446350.jpg'
-  },
-  {
-    id: 2,
-    title: 'Вечерняя тишина',
-    author: 'Мария Соколова',
-    year: 1923,
-    image: '/images/6391891571.jpg'
-  },
-  {
-    id: 3,
-    title: 'Осенний сад',
-    author: 'Дмитрий Волков',
-    year: 1907,
-    image: '/images/6429583340.jpg'
-  },
-  {
-    id: 4,
-    title: 'Зимний пейзаж',
-    author: 'Елена Краснова',
-    year: 1935,
-    image: '/images/6430248554.jpg'
-  }
-]
 </script>
 
 <style scoped>
@@ -147,11 +117,6 @@ const paintings = [
 .gallery-card {
   text-decoration: none;
   color: inherit;
-  transition: transform 0.3s ease;
-}
-
-.gallery-card:hover {
-  transform: translateY(-4px);
 }
 
 .card-image-wrapper {
@@ -159,6 +124,11 @@ const paintings = [
   aspect-ratio: 4 / 3;
   overflow: hidden;
   border-radius: 4px;
+  transition: transform 0.3s ease;
+}
+
+.card-image-wrapper:hover {
+  transform: translateY(-4px);
 }
 
 .card-image {

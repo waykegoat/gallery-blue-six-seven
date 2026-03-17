@@ -5,6 +5,7 @@
     viewBox="0 0 100 100"
     fill="none"
     xmlns="http://www.w3.org/2000/svg"
+    style="display: flex"
   >
     <!-- Top-left: П shape (black) -->
     <path d="M8 8 L8 48 L8 48" stroke="black" stroke-width="7" fill="none" stroke-linecap="square"/>
