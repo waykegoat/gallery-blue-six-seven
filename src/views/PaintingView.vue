@@ -9,32 +9,41 @@
         <p class="painting-author">{{ painting.author }}</p>
         <p class="painting-year">{{ painting.year }} г.</p>
         <p class="painting-description">{{ painting.description }}</p>
-        <RouterLink to="/" class="back-link">&larr; На главную</RouterLink>
+        <button @click="goBack" class="back-link">&larr; Назад</button>
       </div>
     </div>
     <div v-else class="not-found">
       <h1>Картина не найдена</h1>
-      <RouterLink to="/" class="back-link">&larr; На главную</RouterLink>
+      <RouterLink to="/catalog" class="back-link">&larr; В каталог</RouterLink>
     </div>
   </div>
 </template>
 
 <script setup lang="ts">
-import { computed } from 'vue'
-import { useRoute } from 'vue-router'
+import { computed, onMounted } from 'vue'
+import { useRoute, useRouter } from 'vue-router'
 import { paintings } from '../data/paintings'
 
 const route = useRoute()
+const router = useRouter()
 
 const painting = computed(() => {
   const id = Number(route.params.id)
   return paintings.find(p => p.id === id)
 })
+
+const goBack = () => {
+  router.back()
+}
+
+onMounted(() => {
+  window.scrollTo(0, 0)
+})
 </script>
 
 <style scoped>
 .painting-page {
-  padding: 6rem 2rem 4rem;
+  padding: 96px 32px 64px;
   max-width: 1000px;
   margin: 0 auto;
 }
@@ -43,7 +52,7 @@ const painting = computed(() => {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 2rem;
+  gap: 32px;
 }
 
 .painting-image-wrapper {
@@ -66,37 +75,42 @@ const painting = computed(() => {
 
 .painting-title {
   font-family: 'Serif', 'Times New Roman', Times, serif;
-  font-size: 2.5rem;
+  font-size: 40px;
   font-weight: 400;
-  margin: 0 0 0.5rem;
-  color: #333;
+  margin: 0 0 8px;
+  color: #333333;
 }
 
 .painting-author {
-  font-size: 1.1rem;
-  color: #666;
-  margin: 0 0 0.25rem;
+  font-size: 18px;
+  color: #666666;
+  margin: 0 0 4px;
 }
 
 .painting-year {
-  font-size: 1rem;
-  color: #999;
-  margin: 0 0 1.5rem;
+  font-size: 16px;
+  color: #999999;
+  margin: 0 0 24px;
 }
 
 .painting-description {
-  font-size: 1rem;
-  line-height: 1.7;
-  color: #555;
-  margin: 0 0 2rem;
+  font-size: 16px;
+  line-height: 27px;
+  color: #555555;
+  margin: 0 0 32px;
 }
 
 .back-link {
   display: inline-block;
   text-decoration: none;
   color: #4a6178;
-  font-size: 1rem;
-  transition: color 0.2s;
+  font-size: 16px;
+  transition: color 200ms;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
+  padding: 0;
 }
 
 .back-link:hover {
@@ -105,12 +119,12 @@ const painting = computed(() => {
 
 .not-found {
   text-align: center;
-  padding: 4rem 0;
+  padding: 64px 0;
 }
 
 .not-found h1 {
   font-family: 'Serif', 'Times New Roman', Times, serif;
   font-weight: 400;
-  color: #333;
+  color: #333333;
 }
 </style>

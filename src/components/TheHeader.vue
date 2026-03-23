@@ -25,7 +25,7 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 2rem;
+  padding: 32px;
   width: 100%;
   box-sizing: border-box;
   color: black;
@@ -36,7 +36,7 @@ header {
   top: 0;
   left: 0;
   right: 0;
-  z-index: 10;
+  z-index: 1;
 }
 
 nav {
@@ -45,10 +45,10 @@ nav {
 }
 
 nav a {
-  margin: 0 1rem;
+  margin: 0 16px;
   text-decoration: none;
   color: black;
-  font-size: 1rem;
+  font-size: 16px;
 }
 
 .separator {

@@ -8,15 +8,19 @@
       <div class="footer-section">
         <h4 class="footer-subtitle">Навигация</h4>
         <nav class="footer-nav">
-          <RouterLink to="/" class="footer-link">Главная</RouterLink>
-          <RouterLink to="/catalog" class="footer-link">Каталог</RouterLink>
-          <RouterLink to="/news" class="footer-link">Новости</RouterLink>
+          <a href="/" class="footer-link">Главная</a>
+          <a href="/catalog" class="footer-link">Каталог</a>
+          <a href="/news" class="footer-link">Новости</a>
         </nav>
       </div>
       <div class="footer-section">
         <h4 class="footer-subtitle">Контакты</h4>
-        <p class="footer-text">info@artium-gallery.ru</p>
-        <p class="footer-text">+7 (999) 123-45-67</p>
+        <p class="footer-text">
+          <a href="mailto:info@artium-gallery.ru" class="footer-link">info@artium-gallery.ru</a>
+        </p>
+        <p class="footer-text">
+          <a href="tel:+79991234567" class="footer-link">+7 (999) 123-45-67</a>
+        </p>
       </div>
     </div>
     <div class="footer-bottom">
@@ -25,24 +29,20 @@
   </footer>
 </template>
 
-<script setup lang="ts">
-import { RouterLink } from 'vue-router'
-</script>
-
 <style scoped>
 .footer {
   background-color: #1a1a1a;
-  color: #fff;
-  padding: 3rem 2rem 1.5rem;
-  margin-top: auto;
+  color: #ffffff;
+  padding: 48px 32px 24px;
+  z-index: 1;
 }
 
 .footer-content {
   max-width: 1200px;
   margin: 0 auto;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 2rem;
+  display: flex;
+  justify-content: space-between;
+  gap: 32px;
 }
 
 .footer-section {
@@ -52,62 +52,62 @@ import { RouterLink } from 'vue-router'
 
 .footer-title {
   font-family: 'Serif', 'Times New Roman', Times, serif;
-  font-size: 1.5rem;
+  font-size: 24px;
   font-weight: 400;
-  margin: 0 0 0.5rem;
-  letter-spacing: 0.1em;
+  margin: 0 0 8px;
+  letter-spacing: 1px;
 }
 
 .footer-subtitle {
-  font-size: 0.9rem;
+  font-size: 14px;
   font-weight: 500;
-  margin: 0 0 1rem;
-  color: #999;
+  margin: 0 0 16px;
+  color: #999999;
   text-transform: uppercase;
-  letter-spacing: 0.05em;
+  letter-spacing: 1px;
 }
 
 .footer-text {
-  font-size: 0.9rem;
-  color: #ccc;
-  margin: 0 0 0.25rem;
-  line-height: 1.6;
+  font-size: 14px;
+  color: #cccccc;
+  margin: 0 0 4px;
+  line-height: 26px;
 }
 
 .footer-nav {
   display: flex;
   flex-direction: column;
-  gap: 0.5rem;
+  gap: 8px;
 }
 
 .footer-link {
-  color: #ccc;
+  color: #cccccc;
   text-decoration: none;
-  font-size: 0.9rem;
-  transition: color 0.2s;
+  font-size: 14px;
+  transition: color 200ms;
 }
 
 .footer-link:hover {
-  color: #fff;
+  color: #ffffff;
 }
 
 .footer-bottom {
   max-width: 1200px;
-  margin: 2rem auto 0;
-  padding-top: 1.5rem;
-  border-top: 1px solid #333;
+  margin: 32px auto 0;
+  padding-top: 24px;
+  border-top: 1px solid #333333;
   text-align: center;
 }
 
 .footer-copyright {
-  font-size: 0.85rem;
-  color: #666;
+  font-size: 14px;
+  color: #666666;
   margin: 0;
 }
 
 @media (max-width: 768px) {
   .footer-content {
-    grid-template-columns: 1fr;
+    flex-direction: column;
     text-align: center;
   }
 

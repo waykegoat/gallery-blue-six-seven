@@ -69,17 +69,17 @@ const { backgroundPosition } = useParallax(30)
 
 .title {
   font-family: 'Serif', 'Times New Roman', Times, serif;
-  font-size: 6rem;
+  font-size: 96px;
   font-weight: 400;
   margin: 0;
-  letter-spacing: 0.1em;
+  letter-spacing: 2px;
 }
 
 .subtitle {
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
-  font-size: 1rem;
-  margin-top: 1rem;
-  color: #666;
+  font-size: 16px;
+  margin-top: 16px;
+  color: #666666;
 }
 
 .hero-fade {
@@ -94,24 +94,24 @@ const { backgroundPosition } = useParallax(30)
 }
 
 .gallery-section {
-  padding: 4rem 2rem;
+  padding: 64px 32px;
   max-width: 1200px;
   margin: 0 auto;
 }
 
 .gallery-title {
   font-family: 'Serif', 'Times New Roman', Times, serif;
-  font-size: 2.5rem;
+  font-size: 40px;
   font-weight: 400;
   text-align: center;
-  margin-bottom: 3rem;
-  color: #333;
+  margin-bottom: 48px;
+  color: #333333;
 }
 
 .gallery-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 2rem;
+  gap: 32px;
 }
 
 .gallery-card {
@@ -124,7 +124,7 @@ const { backgroundPosition } = useParallax(30)
   aspect-ratio: 4 / 3;
   overflow: hidden;
   border-radius: 4px;
-  transition: transform 0.3s ease;
+  transition: transform 300ms ease;
 }
 
 .card-image-wrapper:hover {
@@ -135,7 +135,7 @@ const { backgroundPosition } = useParallax(30)
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transition: transform 0.3s ease;
+  transition: transform 300ms ease;
 }
 
 .gallery-card:hover .card-image {
@@ -143,26 +143,26 @@ const { backgroundPosition } = useParallax(30)
 }
 
 .card-info {
-  padding: 1rem 0;
+  padding: 16px 0;
 }
 
 .card-title {
   font-family: 'Serif', 'Times New Roman', Times, serif;
-  font-size: 1.25rem;
+  font-size: 20px;
   font-weight: 400;
-  margin: 0 0 0.25rem;
-  color: #333;
+  margin: 0 0 4px;
+  color: #333333;
 }
 
 .card-author {
-  font-size: 0.9rem;
-  color: #666;
-  margin: 0 0 0.15rem;
+  font-size: 14px;
+  color: #666666;
+  margin: 0 0 2px;
 }
 
 .card-year {
-  font-size: 0.85rem;
-  color: #999;
+  font-size: 14px;
+  color: #999999;
   margin: 0;
 }
 </style>
