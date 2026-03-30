@@ -1,5 +1,5 @@
 import { createRouter, createWebHistory } from 'vue-router'
-import HomeView from '../views/HomeView.vue'
+import HomeView from '@/views/HomeView.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -20,11 +20,19 @@ const router = createRouter({
       component: () => import('../views/NewsPage.vue')
     },
     {
+      path: '/news/:id',
+      name: 'news-detail',
+      component: () => import('../views/NewsDetailView.vue')
+    },
+    {
       path: '/painting/:id',
       name: 'painting',
       component: () => import('../views/PaintingView.vue')
     }
-  ]
+  ],
+  scrollBehavior(_to, _from, savedPosition) {
+    return savedPosition || { top: 0 }
+  }
 })
 
 export default router

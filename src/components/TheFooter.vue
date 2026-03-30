@@ -3,14 +3,14 @@
     <div class="footer-content">
       <div class="footer-section">
         <h3 class="footer-title">ARTIUM</h3>
-        <p class="footer-text">Коллекция из 8,436 произведений искусства</p>
+        <p class="footer-text">Коллекция из {{ paintings.length }} произведений искусства</p>
       </div>
       <div class="footer-section">
         <h4 class="footer-subtitle">Навигация</h4>
         <nav class="footer-nav">
-          <a href="/" class="footer-link">Главная</a>
-          <a href="/catalog" class="footer-link">Каталог</a>
-          <a href="/news" class="footer-link">Новости</a>
+          <RouterLink to="/" class="footer-link">Главная</RouterLink>
+          <RouterLink to="/catalog" class="footer-link">Каталог</RouterLink>
+          <RouterLink to="/news" class="footer-link">Новости</RouterLink>
         </nav>
       </div>
       <div class="footer-section">
@@ -29,12 +29,15 @@
   </footer>
 </template>
 
+<script setup lang="ts">
+import { paintings } from '@/data/paintings'
+</script>
+
 <style scoped>
 .footer {
   background-color: #1a1a1a;
   color: #ffffff;
   padding: 48px 32px 24px;
-  z-index: 1;
 }
 
 .footer-content {
@@ -51,9 +54,8 @@
 }
 
 .footer-title {
-  font-family: 'Serif', 'Times New Roman', Times, serif;
+  font-family: var(--serif-font);
   font-size: 24px;
-  font-weight: 400;
   margin: 0 0 8px;
   letter-spacing: 1px;
 }

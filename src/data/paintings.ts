@@ -1,11 +1,6 @@
-export interface Painting {
-  id: number
-  title: string
-  author: string
-  year: number
-  image: string
-  description?: string
-}
+import type { Painting } from '@/types'
+
+export type { Painting } from '@/types'
 
 export const paintings: Painting[] = [
   {

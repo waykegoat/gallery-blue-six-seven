@@ -16,13 +16,16 @@
       <h1>Картина не найдена</h1>
       <RouterLink to="/catalog" class="back-link">&larr; В каталог</RouterLink>
     </div>
+    <ReviewFormComponent @submit="handleReviewSubmit" />
   </div>
 </template>
 
 <script setup lang="ts">
-import { computed, onMounted } from 'vue'
+import { computed } from 'vue'
 import { useRoute, useRouter } from 'vue-router'
-import { paintings } from '../data/paintings'
+import { paintings } from '@/data/paintings'
+import ReviewFormComponent from '@/components/ReviewForm.vue'
+import type { ReviewForm } from '@/types'
 
 const route = useRoute()
 const router = useRouter()
@@ -36,9 +39,9 @@ const goBack = () => {
   router.back()
 }
 
-onMounted(() => {
-  window.scrollTo(0, 0)
-})
+const handleReviewSubmit = (review: ReviewForm) => {
+  console.log('Review submitted:', review)
+}
 </script>
 
 <style scoped>
@@ -74,47 +77,44 @@ onMounted(() => {
 }
 
 .painting-title {
-  font-family: 'Serif', 'Times New Roman', Times, serif;
+  font-family: var(--serif-font);
   font-size: 40px;
-  font-weight: 400;
   margin: 0 0 8px;
-  color: #333333;
+  color: var(--text-color);
 }
 
 .painting-author {
   font-size: 18px;
-  color: #666666;
+  color: var(--text-secondary);
   margin: 0 0 4px;
 }
 
 .painting-year {
   font-size: 16px;
-  color: #999999;
+  color: var(--text-tertiary);
   margin: 0 0 24px;
 }
 
 .painting-description {
   font-size: 16px;
-  line-height: 27px;
-  color: #555555;
+  line-height: 24px;
+  color: var(--text-secondary);
   margin: 0 0 32px;
+  white-space: pre-wrap;
 }
 
 .back-link {
-  display: inline-block;
-  text-decoration: none;
-  color: #4a6178;
-  font-size: 16px;
-  transition: color 200ms;
   background: none;
   border: none;
+  color: var(--link-color);
+  font-size: 16px;
   cursor: pointer;
-  font-family: inherit;
   padding: 0;
+  transition: color 200ms;
 }
 
 .back-link:hover {
-  color: #333;
+  color: var(--link-hover);
 }
 
 .not-found {
@@ -123,8 +123,7 @@ onMounted(() => {
 }
 
 .not-found h1 {
-  font-family: 'Serif', 'Times New Roman', Times, serif;
-  font-weight: 400;
-  color: #333333;
+  font-family: var(--serif-font);
+  color: var(--text-color);
 }
 </style>

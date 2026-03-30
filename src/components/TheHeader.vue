@@ -1,12 +1,12 @@
 <template>
   <header :class="{ 'header-home': isHomePage }">
     <nav>
-      <RouterLink to="/">
-        <LogoIcon :size="20" />
+      <RouterLink to="/" class="logo-link">
+        <img src="@/assets/logo.svg" alt="ARTIUM" class="logo" />
       </RouterLink>
-      <RouterLink to="/catalog">Каталог</RouterLink>
+      <RouterLink to="/catalog" class="nav-link">Каталог</RouterLink>
       <span class="separator">|</span>
-      <RouterLink to="/news">Новости</RouterLink>
+      <RouterLink to="/news" class="nav-link">Новости</RouterLink>
     </nav>
   </header>
 </template>
@@ -14,7 +14,6 @@
 <script setup lang="ts">
 import { computed } from 'vue'
 import { useRoute } from 'vue-router'
-import LogoIcon from './LogoIcon.vue'
 
 const route = useRoute()
 const isHomePage = computed(() => route.path === '/')
@@ -27,8 +26,6 @@ header {
   align-items: center;
   padding: 32px;
   width: 100%;
-  box-sizing: border-box;
-  color: black;
 }
 
 .header-home {
@@ -42,16 +39,25 @@ header {
 nav {
   display: flex;
   align-items: center;
+  gap: 16px;
 }
 
-nav a {
-  margin: 0 16px;
+.logo {
+  width: 20px;
+  height: 20px;
+}
+
+.nav-link {
   text-decoration: none;
-  color: black;
-  font-size: 16px;
+  color: var(--text-color);
+  transition: color 200ms;
+}
+
+.nav-link:hover {
+  color: var(--primary-color);
 }
 
 .separator {
-  color: black;
+  color: var(--text-color);
 }
 </style>

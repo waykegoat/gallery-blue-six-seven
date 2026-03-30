@@ -4,7 +4,7 @@
       <div class="background-parallax" :style="{ backgroundPosition: backgroundPosition }"></div>
       <main class="home-content">
         <h1 class="title">ARTIUM</h1>
-        <p class="subtitle">8,436 artworks</p>
+        <p class="subtitle">{{ paintings.length }} artworks</p>
       </main>
       <div class="hero-fade"></div>
     </section>
@@ -33,8 +33,8 @@
 </template>
 
 <script setup lang="ts">
-import { useParallax } from '../composables/useParallax'
-import { paintings } from '../data/paintings'
+import { useParallax } from '@/composables/useParallax'
+import { paintings } from '@/data/paintings'
 
 const { backgroundPosition } = useParallax(30)
 </script>
@@ -64,22 +64,18 @@ const { backgroundPosition } = useParallax(30)
 
 .home-content {
   text-align: center;
-  color: #333;
+  color: var(--text-color);
 }
 
 .title {
-  font-family: 'Serif', 'Times New Roman', Times, serif;
+  font-family: var(--serif-font);
   font-size: 96px;
-  font-weight: 400;
-  margin: 0;
   letter-spacing: 2px;
 }
 
 .subtitle {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
-  font-size: 16px;
   margin-top: 16px;
-  color: #666666;
+  color: var(--text-secondary);
 }
 
 .hero-fade {
@@ -88,7 +84,7 @@ const { backgroundPosition } = useParallax(30)
   left: 0;
   width: 100%;
   height: 25%;
-  background: linear-gradient(to bottom, transparent, #ffffff);
+  background: linear-gradient(to bottom, transparent, var(--background-color));
   z-index: 1;
   pointer-events: none;
 }
@@ -100,12 +96,11 @@ const { backgroundPosition } = useParallax(30)
 }
 
 .gallery-title {
-  font-family: 'Serif', 'Times New Roman', Times, serif;
+  font-family: var(--serif-font);
   font-size: 40px;
-  font-weight: 400;
   text-align: center;
   margin-bottom: 48px;
-  color: #333333;
+  color: var(--text-color);
 }
 
 .gallery-grid {
@@ -147,22 +142,21 @@ const { backgroundPosition } = useParallax(30)
 }
 
 .card-title {
-  font-family: 'Serif', 'Times New Roman', Times, serif;
+  font-family: var(--serif-font);
   font-size: 20px;
-  font-weight: 400;
   margin: 0 0 4px;
-  color: #333333;
+  color: var(--text-color);
 }
 
 .card-author {
   font-size: 14px;
-  color: #666666;
+  color: var(--text-secondary);
   margin: 0 0 2px;
 }
 
 .card-year {
   font-size: 14px;
-  color: #999999;
+  color: var(--text-tertiary);
   margin: 0;
 }
 </style>
