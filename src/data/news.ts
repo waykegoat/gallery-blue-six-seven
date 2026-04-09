@@ -1,8 +1,8 @@
-import type { News } from '@/types'
+import type { INews } from '@/types'
 
-export type { News } from '@/types'
+export type { INews } from '@/types'
 
-export const news: News[] = [
+export const news: INews[] = [
   {
     id: 1,
     title: 'Открытие новой выставки',

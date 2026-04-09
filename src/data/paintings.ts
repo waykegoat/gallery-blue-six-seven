@@ -1,8 +1,8 @@
-import type { Painting } from '@/types'
+import type { IPainting } from '@/types'
 
-export type { Painting } from '@/types'
+export type { IPainting } from '@/types'
 
-export const paintings: Painting[] = [
+export const paintings: IPainting[] = [
   {
     id: 1,
     title: 'Утренний свет',

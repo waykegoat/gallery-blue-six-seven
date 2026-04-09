@@ -1,4 +1,4 @@
-export interface Painting {
+export interface IPainting {
   id: number
   title: string
   author: string
@@ -7,14 +7,14 @@ export interface Painting {
   description?: string
 }
 
-export interface News {
+export interface INews {
   id: number
   title: string
   date: string
   content: string
 }
 
-export interface ReviewForm {
+export interface IReviewForm {
   name: string
   email: string
   rating: string

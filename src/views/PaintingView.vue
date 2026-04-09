@@ -25,7 +25,7 @@ import { computed } from 'vue'
 import { useRoute, useRouter } from 'vue-router'
 import { paintings } from '@/data/paintings'
 import ReviewFormComponent from '@/components/ReviewForm.vue'
-import type { ReviewForm } from '@/types'
+import type { IReviewForm } from '@/types'
 
 const route = useRoute()
 const router = useRouter()
@@ -39,7 +39,7 @@ const goBack = () => {
   router.back()
 }
 
-const handleReviewSubmit = (review: ReviewForm) => {
+const handleReviewSubmit = (review: IReviewForm) => {
   console.log('Review submitted:', review)
 }
 </script>

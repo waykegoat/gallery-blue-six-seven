@@ -12,10 +12,10 @@
 </template>
 
 <script setup lang="ts">
-import type { Painting } from '@/data/paintings'
+import type { IPainting } from '@/data/paintings'
 
 defineProps<{
-  painting: Painting
+  painting: IPainting
 }>()
 </script>
 

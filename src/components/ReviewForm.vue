@@ -47,10 +47,10 @@
 </template>
 
 <script setup lang="ts">
-import type { ReviewForm } from '@/types'
+import type { IReviewForm } from '@/types'
 import { ref } from 'vue'
 
-const form = ref<ReviewForm>({
+const form = ref<IReviewForm>({
   name: '',
   email: '',
   rating: '',
