@@ -40,28 +40,27 @@ const goBack = () => {
 
 .news-date {
   font-size: 14px;
-  color: var(--text-tertiary);
+  color: var(--color-text-tertiary);
   margin-bottom: 16px;
 }
 
 .news-title {
-  font-family: var(--serif-font);
   font-size: 48px;
   margin: 0 0 32px;
-  color: var(--text-color);
+  color: var(--color-text);
 }
 
 .news-text {
   font-size: 16px;
   line-height: 24px;
-  color: var(--text-secondary);
+  color: var(--color-text-secondary);
   margin-bottom: 32px;
 }
 
 .back-link {
   background: none;
   border: none;
-  color: var(--link-color);
+  color: var(--color-link);
   font-size: 16px;
   cursor: pointer;
   padding: 0;
@@ -69,7 +68,7 @@ const goBack = () => {
 }
 
 .back-link:hover {
-  color: var(--link-hover);
+  color: var(--color-link-hover);
 }
 
 .not-found {
@@ -78,7 +77,6 @@ const goBack = () => {
 }
 
 .not-found h1 {
-  font-family: var(--serif-font);
-  color: var(--text-color);
+  color: var(--color-text);
 }
 </style>

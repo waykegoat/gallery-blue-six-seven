@@ -64,18 +64,17 @@ const { backgroundPosition } = useParallax(30)
 
 .home-content {
   text-align: center;
-  color: var(--text-color);
+  color: var(--color-text);
 }
 
 .title {
-  font-family: var(--serif-font);
   font-size: 96px;
   letter-spacing: 2px;
 }
 
 .subtitle {
   margin-top: 16px;
-  color: var(--text-secondary);
+  color: var(--color-text-secondary);
 }
 
 .hero-fade {
@@ -84,7 +83,7 @@ const { backgroundPosition } = useParallax(30)
   left: 0;
   width: 100%;
   height: 25%;
-  background: linear-gradient(to bottom, transparent, var(--background-color));
+  background: linear-gradient(to bottom, transparent, var(--color-background));
   z-index: 1;
   pointer-events: none;
 }
@@ -96,11 +95,10 @@ const { backgroundPosition } = useParallax(30)
 }
 
 .gallery-title {
-  font-family: var(--serif-font);
   font-size: 40px;
   text-align: center;
   margin-bottom: 48px;
-  color: var(--text-color);
+  color: var(--color-text);
 }
 
 .gallery-grid {
@@ -142,21 +140,20 @@ const { backgroundPosition } = useParallax(30)
 }
 
 .card-title {
-  font-family: var(--serif-font);
   font-size: 20px;
   margin: 0 0 4px;
-  color: var(--text-color);
+  color: var(--color-text);
 }
 
 .card-author {
   font-size: 14px;
-  color: var(--text-secondary);
+  color: var(--color-text-secondary);
   margin: 0 0 2px;
 }
 
 .card-year {
   font-size: 14px;
-  color: var(--text-tertiary);
+  color: var(--color-text-tertiary);
   margin: 0;
 }
 </style>

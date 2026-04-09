@@ -49,15 +49,15 @@ nav {
 
 .nav-link {
   text-decoration: none;
-  color: var(--text-color);
+  color: var(--color-text);
   transition: color 200ms;
 }
 
 .nav-link:hover {
-  color: var(--primary-color);
+  color: var(--color-primary);
 }
 
 .separator {
-  color: var(--text-color);
+  color: var(--color-text);
 }
 </style>

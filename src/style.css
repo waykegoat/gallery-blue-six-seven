@@ -1,15 +1,18 @@
 :root {
-  --primary-color: #4a6178;
-  --text-color: #333333;
-  --text-secondary: #666666;
-  --text-tertiary: #999999;
-  --background-color: #ffffff;
-  --border-color: #e0e0e0;
-  --link-color: #4a6178;
-  --link-hover: #333333;
-  --serif-font: 'Serif', 'Times New Roman', Times, serif;
+  --color-primary: #4a6178;
+  --color-text: #333333;
+  --color-text-secondary: #666666;
+  --color-text-tertiary: #999999;
+  --color-background: #ffffff;
+  --color-border: #e0e0e0;
+  --color-link: #4a6178;
+  --color-link-hover: #333333;
   
   scroll-behavior: smooth;
+}
+
+* {
+  font-family: 'Serif', 'Times New Roman', Times, serif;
 }
 
 html {
@@ -18,11 +21,11 @@ html {
 }
 
 a {
-  color: var(--link-color);
+  color: var(--color-link);
   text-decoration: none;
 }
 a:hover {
-  color: var(--link-hover);
+  color: var(--color-link-hover);
 }
 
 body {
@@ -42,13 +45,13 @@ button {
   border: 1px solid transparent;
   padding: 10px 20px;
   font-size: 16px;
-  background-color: var(--text-color);
-  color: var(--background-color);
+  background-color: var(--color-text);
+  color: var(--color-background);
   cursor: pointer;
   transition: border-color 250ms;
 }
 button:hover {
-  border-color: var(--primary-color);
+  border-color: var(--color-primary);
 }
 button:focus,
 button:focus-visible {

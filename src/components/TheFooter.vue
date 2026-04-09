@@ -54,7 +54,6 @@ import { paintings } from '@/data/paintings'
 }
 
 .footer-title {
-  font-family: var(--serif-font);
   font-size: 24px;
   margin: 0 0 8px;
   letter-spacing: 1px;

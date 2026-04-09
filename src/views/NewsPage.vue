@@ -29,17 +29,16 @@ import { news } from '@/data/news'
 }
 
 .news-title {
-  font-family: var(--serif-font);
   font-size: 48px;
   text-align: center;
   margin: 0 0 16px;
-  color: var(--text-color);
+  color: var(--color-text);
 }
 
 .news-subtitle {
   font-size: 16px;
   text-align: center;
-  color: var(--text-secondary);
+  color: var(--color-text-secondary);
   margin: 0 0 48px;
 }
 
@@ -50,40 +49,39 @@ import { news } from '@/data/news'
 }
 
 .news-item {
-  border-left: 3px solid var(--primary-color);
+  border-left: 3px solid var(--color-primary);
   padding-left: 24px;
   padding-bottom: 24px;
-  border-bottom: 1px solid var(--border-color);
+  border-bottom: 1px solid var(--color-border);
 }
 
 .news-date {
   font-size: 14px;
-  color: var(--text-tertiary);
+  color: var(--color-text-tertiary);
   margin-bottom: 8px;
 }
 
 .news-item-title {
-  font-family: var(--serif-font);
   font-size: 24px;
   margin: 0 0 12px;
-  color: var(--text-color);
+  color: var(--color-text);
 }
 
 .news-text {
   font-size: 16px;
   line-height: 24px;
-  color: var(--text-secondary);
+  color: var(--color-text-secondary);
   margin: 0 0 16px;
 }
 
 .news-link {
-  color: var(--link-color);
+  color: var(--color-link);
   text-decoration: none;
   font-size: 14px;
   transition: color 200ms;
 }
 
 .news-link:hover {
-  color: var(--link-hover);
+  color: var(--color-link-hover);
 }
 </style>

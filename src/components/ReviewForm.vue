@@ -74,18 +74,17 @@ const submitReview = () => {
 
 <style scoped>
 .review-form {
-  background: var(--background-color);
-  border: 1px solid var(--border-color);
+  background: var(--color-background);
+  border: 1px solid var(--color-border);
   border-radius: 8px;
   padding: 32px;
   margin-top: 48px;
 }
 
 .form-title {
-  font-family: var(--serif-font);
   font-size: 24px;
   margin: 0 0 24px;
-  color: var(--text-color);
+  color: var(--color-text);
 }
 
 .form-group {
@@ -97,7 +96,7 @@ const submitReview = () => {
   margin-bottom: 8px;
   font-size: 14px;
   font-weight: 500;
-  color: var(--text-color);
+  color: var(--color-text);
 }
 
 .form-input,
@@ -105,12 +104,12 @@ const submitReview = () => {
 .form-textarea {
   width: 100%;
   padding: 12px;
-  border: 1px solid var(--border-color);
+  border: 1px solid var(--color-border);
   border-radius: 4px;
   font-size: 16px;
   font-family: inherit;
-  background: var(--background-color);
-  color: var(--text-color);
+  background: var(--color-background);
+  color: var(--color-text);
   box-sizing: border-box;
 }
 
@@ -118,7 +117,7 @@ const submitReview = () => {
 .form-select:focus,
 .form-textarea:focus {
   outline: none;
-  border-color: var(--primary-color);
+  border-color: var(--color-primary);
 }
 
 .form-textarea {
@@ -127,8 +126,8 @@ const submitReview = () => {
 }
 
 .form-button {
-  background: var(--primary-color);
-  color: var(--background-color);
+  background: var(--color-primary);
+  color: var(--color-background);
   border: none;
   padding: 12px 24px;
   border-radius: 4px;
@@ -139,7 +138,7 @@ const submitReview = () => {
 }
 
 .form-button:hover:not(:disabled) {
-  background: var(--text-color);
+  background: var(--color-text);
 }
 
 .form-button:disabled {

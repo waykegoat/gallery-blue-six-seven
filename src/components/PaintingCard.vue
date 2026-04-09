@@ -54,21 +54,20 @@ defineProps<{
 }
 
 .card-title {
-  font-family: var(--serif-font);
   font-size: 24px;
   margin: 0;
-  color: var(--text-color);
+  color: var(--color-text);
 }
 
 .card-author {
   font-size: 16px;
-  color: var(--text-secondary);
+  color: var(--color-text-secondary);
   margin: 0;
 }
 
 .card-year {
   font-size: 14px;
-  color: var(--text-tertiary);
+  color: var(--color-text-tertiary);
   margin: 0;
 }
 

@@ -77,28 +77,27 @@ const handleReviewSubmit = (review: ReviewForm) => {
 }
 
 .painting-title {
-  font-family: var(--serif-font);
   font-size: 40px;
   margin: 0 0 8px;
-  color: var(--text-color);
+  color: var(--color-text);
 }
 
 .painting-author {
   font-size: 18px;
-  color: var(--text-secondary);
+  color: var(--color-text-secondary);
   margin: 0 0 4px;
 }
 
 .painting-year {
   font-size: 16px;
-  color: var(--text-tertiary);
+  color: var(--color-text-tertiary);
   margin: 0 0 24px;
 }
 
 .painting-description {
   font-size: 16px;
   line-height: 24px;
-  color: var(--text-secondary);
+  color: var(--color-text-secondary);
   margin: 0 0 32px;
   white-space: pre-wrap;
 }
@@ -106,7 +105,7 @@ const handleReviewSubmit = (review: ReviewForm) => {
 .back-link {
   background: none;
   border: none;
-  color: var(--link-color);
+  color: var(--color-link);
   font-size: 16px;
   cursor: pointer;
   padding: 0;
@@ -114,7 +113,7 @@ const handleReviewSubmit = (review: ReviewForm) => {
 }
 
 .back-link:hover {
-  color: var(--link-hover);
+  color: var(--color-link-hover);
 }
 
 .not-found {
@@ -123,7 +122,6 @@ const handleReviewSubmit = (review: ReviewForm) => {
 }
 
 .not-found h1 {
-  font-family: var(--serif-font);
-  color: var(--text-color);
+  color: var(--color-text);
 }
 </style>

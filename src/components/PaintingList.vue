@@ -21,7 +21,7 @@ import { paintings } from '@/data/paintings'
 }
 
 .painting-list > * {
-  border-bottom: 1px solid var(--border-color);
+  border-bottom: 1px solid var(--color-border);
   padding-bottom: 32px;
 }
 </style>

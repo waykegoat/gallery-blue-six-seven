@@ -18,17 +18,16 @@ import PaintingList from '@/components/PaintingList.vue'
 }
 
 .catalog-title {
-  font-family: var(--serif-font);
   font-size: 48px;
   text-align: center;
   margin: 0 0 16px;
-  color: var(--text-color);
+  color: var(--color-text);
 }
 
 .catalog-subtitle {
   font-size: 16px;
   text-align: center;
-  color: var(--text-secondary);
+  color: var(--color-text-secondary);
   margin: 0 0 48px;
 }
 </style>
