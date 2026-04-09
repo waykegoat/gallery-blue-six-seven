@@ -22,15 +22,19 @@
       />
     </div>
     <div class="form-group">
-      <label for="rating" class="form-label">Оценка</label>
-      <select id="rating" v-model="form.rating" class="form-select" required>
-        <option value="">Выберите оценку</option>
-        <option value="5">5 - Отлично</option>
-        <option value="4">4 - Хорошо</option>
-        <option value="3">3 - Средне</option>
-        <option value="2">2 - Плохо</option>
-        <option value="1">1 - Ужасно</option>
-      </select>
+      <label class="form-label">Оценка</label>
+      <div class="star-rating">
+        <span
+          v-for="star in 5"
+          :key="star"
+          class="star"
+          :class="{ active: star <= Number(form.rating) }"
+          @click="setRating(star)"
+        >
+          ★
+        </span>
+      </div>
+      <input type="hidden" v-model="form.rating" required />
     </div>
     <div class="form-group">
       <label for="review" class="form-label">Ваша рецензия</label>
@@ -70,6 +74,10 @@ const submitReview = () => {
     review: ''
   }
 }
+
+const setRating = (rating: number) => {
+  form.value.rating = rating.toString()
+}
 </script>
 
 <style scoped>
@@ -100,7 +108,6 @@ const submitReview = () => {
 }
 
 .form-input,
-.form-select,
 .form-textarea {
   width: 100%;
   padding: 12px;
@@ -114,10 +121,29 @@ const submitReview = () => {
 }
 
 .form-input:focus,
-.form-select:focus,
 .form-textarea:focus {
   outline: none;
   border-color: var(--color-primary);
+}
+
+.star-rating {
+  display: flex;
+  gap: 4px;
+}
+
+.star {
+  font-size: 32px;
+  cursor: pointer;
+  color: var(--color-border);
+  transition: color 200ms;
+}
+
+.star:hover {
+  color: var(--color-primary);
+}
+
+.star.active {
+  color: var(--color-primary);
 }
 
 .form-textarea {
